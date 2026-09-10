@@ -106,13 +106,22 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
         >
           {/* Header */}
           <div className="flex items-center justify-between pb-6 border-b border-white/10 mb-6">
-            <div>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-gold-400">
-                Official Document Preview
-              </span>
-              <h3 className="text-xl sm:text-2xl font-display font-bold text-white">
-                {PORTFOLIO_DATA.personal.name} — Resume
-              </h3>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-2xl overflow-hidden border border-gold-400/40 shadow-sm flex-shrink-0 bg-slate-900">
+                <img
+                  src="/sakthivel.jpg"
+                  alt="Sakthivel V"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div>
+                <span className="text-[10px] font-mono uppercase tracking-widest text-gold-400">
+                  Official Document Preview
+                </span>
+                <h3 className="text-xl sm:text-2xl font-display font-bold text-white">
+                  {PORTFOLIO_DATA.personal.name} — Resume
+                </h3>
+              </div>
             </div>
             <button
               onClick={onClose}

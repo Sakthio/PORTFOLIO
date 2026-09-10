@@ -55,13 +55,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onResumeClick }) => {
             : 'bg-[#0a0c14]/40 backdrop-blur-lg border border-white/5 shadow-none'
         }`}
       >
-        {/* Brand Monogram */}
+        {/* Brand Profile Avatar */}
         <a
           href="#"
           className="group flex items-center gap-2.5 text-sm font-semibold tracking-wider text-white transition-colors"
         >
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/20 via-white/5 to-transparent border border-white/15 flex items-center justify-center font-display font-bold text-xs text-white group-hover:border-gold-400/50 transition-colors">
-            SV
+          <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/20 group-hover:border-gold-400/60 transition-colors shadow-sm bg-slate-900 flex-shrink-0">
+            <img
+              src="/sakthivel.jpg"
+              alt="Sakthivel V"
+              className="w-full h-full object-cover object-top"
+            />
           </div>
           <span className="font-display tracking-tight text-slate-200 group-hover:text-white hidden sm:inline-block">
             {PORTFOLIO_DATA.personal.name}
