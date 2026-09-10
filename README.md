@@ -1,21 +1,5 @@
-# Sakthivel V — Luxury Antigravity Portfolio
+# Sakthivel V — Portfolio
 
-An ultra-premium, modern, Apple-inspired personal portfolio website engineered for **Sakthivel V**, BTech Student in Artificial Intelligence and Data Science.
-
-Designed with an **"Antigravity"** visual aesthetic, **Liquid Glassmorphism UI**, dark obsidian styling, and interactive 3D computing elements.
-
----
-
-## 🌟 Key Highlights & Design Philosophy
-
-- **Antigravity Visuals:** Floating elements, dynamic mouse parallax, interactive 3D levitation, and ambient stardust physics rendered on a hardware-accelerated canvas.
-- **3D AI Tech Core:** Interactive Three.js gyroscope/neural orb responding to cursor coords in the Hero section with live telemetry tags.
-- **Liquid Glass UI:** Soft refraction borders, pill-shaped liquid buttons with magnetic hover physics, subtle light shimmer, and frosted backdrop blurs (`backdrop-blur-2xl`).
-- **Cinematic AI Project Showcase:** Featuring the **AI-Integrated Smart Camera** complete with real-time HUD bounding box and edge-vision metrics, plus modular placeholders for Data Analytics, Machine Learning, and Java.
-- **Academic Timeline:** Distinction markers, glowing timeline nodes, and curriculum highlights for BTech, 12th (75%), and 10th (65%).
-- **Centralized Data File:** Easily edit all personal info, skills, projects, and contact details in one file: `src/data/portfolioData.ts`.
-
----
 
 ## 🚀 Quick Start
 
