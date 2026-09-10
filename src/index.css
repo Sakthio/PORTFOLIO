@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-dark: #030305;
+    --card-dark: rgba(12, 14, 22, 0.65);
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --gold: #d4af37;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #030305;
+    color: #e2e8f0;
+  }
+
+  body {
+    background-color: #030305;
+    color: #e2e8f0;
+    overflow-x: hidden;
+    position: relative;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom luxury scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #030305;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 175, 55, 0.4);
+  }
+}
+
+@layer components {
+  /* Liquid Glass Surface */
+  .glass-surface {
+    background: rgba(13, 16, 26, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5),
+                inset 0 1px 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-surface-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-surface-hover:hover {
+    background: rgba(18, 22, 36, 0.6);
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7),
+                0 0 25px -5px rgba(212, 175, 55, 0.12),
+                inset 0 1px 2px 0 rgba(255, 255, 255, 0.15);
+  }
+
+  /* Liquid Glass Pill Button */
+  .liquid-glass-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 9999px;
+    box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.5),
+                inset 0 1px 1px 0 rgba(255, 255, 255, 0.2),
+                inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .liquid-glass-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+    transition: left 0.6s ease;
+  }
+
+  .liquid-glass-btn:hover::before {
+    left: 100%;
+  }
+
+  .liquid-glass-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.35);
+    box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.6),
+                0 0 20px 2px rgba(212, 175, 55, 0.2),
+                inset 0 1px 2px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .liquid-glass-btn:active {
+    transform: translateY(0px) scale(0.98);
+  }
+
+  /* Secondary subtle glass button */
+  .liquid-glass-btn-secondary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .liquid-glass-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5),
+                inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+  }
+
+  /* Refraction Border Gradient */
+  .border-glow-gold {
+    border-color: rgba(212, 175, 55, 0.35);
+    box-shadow: 0 0 20px -3px rgba(212, 175, 55, 0.15);
+  }
+
+  /* Text Shimmer Effect */
+  .text-gradient-silver {
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #fff7d6 0%, #d4af37 50%, #9b7818 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-ambient {
+    background: linear-gradient(180deg, #ffffff 30%, rgba(255, 255, 255, 0.6) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Subtle background grid / dots */
+.bg-grid-subtle {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
